@@ -261,7 +261,7 @@ def main():
                         )
                     }
                 )
-            )        
+            )
         genes = genes.annotate(mane_select_transcript=mane_select_transcripts[genes.gene_id])
     genes.describe()
     genes.write(args.output, overwrite=True)
