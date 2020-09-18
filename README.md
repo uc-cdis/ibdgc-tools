@@ -1,3 +1,3 @@
-# Tools to bring gnomad browser into ibdgc 
+# Tools to bring gnomad browser into ibdgc
 
 ## ETL tools
