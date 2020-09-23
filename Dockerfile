@@ -3,19 +3,7 @@ FROM python:3.8-slim-buster
 COPY etl-requirements.txt ./etl-requirements.txt
 RUN pip3 install --upgrade pip==20.1.*
 RUN pip3 install -r etl-requirements.txt
-
-RUN apt-get update && apt-get upgrade -y \
-    && apt-get install -y \
-      apt-utils \
-      apt-transport-https \
-      curl \
-      unzip \
-
-# aws cli v2
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
-    && unzip awscliv2.zip \
-    && ./aws/install \
-    && /bin/rm -rf awscliv2.zip ./aws
+RUN python3 -m pip install awscli --upgrade
 
 COPY ./hailtable-etl /hailtable-etl
 WORKDIR /hailtable-etl
