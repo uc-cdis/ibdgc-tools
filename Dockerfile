@@ -9,6 +9,7 @@ RUN apt-get update && apt-get upgrade -y \
       apt-utils \
       apt-transport-https \
       curl \
+      unzip \
 
 # aws cli v2
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
