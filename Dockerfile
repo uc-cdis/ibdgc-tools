@@ -4,6 +4,12 @@ COPY etl-requirements.txt ./etl-requirements.txt
 RUN pip3 install --upgrade pip==20.1.*
 RUN pip3 install -r etl-requirements.txt
 
+RUN apt-get update && apt-get upgrade -y \
+    && apt-get install -y \
+      apt-utils \
+      apt-transport-https \
+      curl \
+
 # aws cli v2
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
     && unzip awscliv2.zip \
