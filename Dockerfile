@@ -11,4 +11,4 @@ WORKDIR /hailtable-etl
 # output logs while running job
 ENV PYTHONUNBUFFERED=1
 
-CMD [ "python3", "/covid19-etl/main.py" ]
+CMD [ "python3", "/hailtabl-etl/hail_to_es.py" ]
